@@ -1,4 +1,8 @@
-body {
-  background-color: darkblue;
-  color: #fff;
-}
+@import "https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css";
+@import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
+
+// css의 선언 순서에 따라서 선언되므로 import 순서 매우 중요!!
+// sass에서는 주석 최소화!!
+@import "./variable";
+@import "./default";
+@import "./layout";

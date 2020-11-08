@@ -1,0 +1,18 @@
+
+.body-container {
+ display: flex;
+ flex-flow: row wrap;
+}
+
+.layout {
+
+ &-full{
+  width: 100%;
+ }
+
+ &-width{
+  width: 1440px;
+  margin: 0 auto;
+ }
+
+}
