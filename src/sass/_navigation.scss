@@ -1,0 +1,23 @@
+@import "./mixin";
+
+.navigation {
+ font-size: 1.5rem;
+
+ // menu-list
+ &__menu-list {
+  @include flexBox();
+   margin: 40px auto;
+ }//---------- nemu-list END
+
+ li {margin-top: 7px;}
+
+ &__menu-item{
+  > a {
+   display: block;
+   font-size: 2rem;
+   font-weight: 600;
+   margin-bottom: 15px;
+  }
+ }
+
+}//---------- navigation END

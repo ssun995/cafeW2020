@@ -20,3 +20,10 @@
  width: $sizeW;
  height: $sizeH;
 }
+
+// clear both
+@mixin clearBoth {
+ content: "";
+ display: block;
+ clear: both;
+}
