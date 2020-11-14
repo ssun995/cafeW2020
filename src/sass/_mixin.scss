@@ -1,0 +1,22 @@
+// flex box mixin
+@mixin flexBox($f-dir:row, $f-wrap:wrap, $ma:space-between, $ca:center) {
+ display: flex;
+ flex-direction: $f-dir;
+ flex-wrap: $f-wrap;
+ justify-content: $ma; // 메인축 변수
+ align-items: $ca; // 교차축 변수
+}
+
+// button reset
+@mixin buttonNone {
+ padding: 0;
+ border: 0;
+ background-color: transparent;
+}
+
+// block : width, height
+@mixin boxSize($sizeW, $sizeH) {
+ display: block;
+ width: $sizeW;
+ height: $sizeH;
+}

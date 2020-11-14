@@ -1,0 +1,74 @@
+@import "./mixin";
+
+// header container
+.header-container {border-bottom: 1px solid $header-border-color;}
+
+// header
+.header {
+ height: 80px;
+ @include flexBox();
+
+  // logo
+  &__logo {
+   width: 100px;
+   height: 40px;
+
+   // items
+   a {display: block;}
+   svg {width: inherit; height: inherit;}
+
+  }//---------- logo END
+
+  // sign in/up
+  &__member-list {
+   order: -1;
+   @include flexBox();
+
+   li {
+    margin-right: 15px;
+
+    a {
+     display: block;
+     padding: 5px 0;
+    }
+
+   }
+
+  }//---------- sign in/up END
+
+  // search form
+  .search {
+   @include flexBox($ma:flex-start);
+   border-bottom: 1px solid $header-border-color;
+
+    input {
+     width: 202px;
+     height: 40px;
+     border: 0;
+     background-color: transparent;
+     color: inherit;
+     padding-left: 1em;
+      }
+
+     input:focus {outline: 0;}
+
+     // button
+     &__button-container {
+      button {@include buttonNone;}
+      button:focus-visible {
+       outline: 0;
+       background-color: inherit;
+       box-shadow: 1px 1px 0px #000;
+      }
+
+      .ir {
+       @include boxSize(40px, 40px);
+       cursor: pointer;
+       background: url(./../images/icon-search.svg) no-repeat 0 0 / 100% 100%;
+      }
+
+     }//---------- button END
+
+  }
+
+}//---------- header END
