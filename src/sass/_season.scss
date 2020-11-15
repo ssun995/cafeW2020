@@ -1,0 +1,45 @@
+@import "./mixin";
+
+.season-container {
+  background-color: $season-bg-color;
+  color: $season-text-color;
+
+ .layout-width {
+ }
+
+ .season {
+  text-transform: uppercase;
+  padding: 83px 919px 120px 119px;
+  text-align: center;
+  position: relative;
+  
+  &__description-small {font-size: 2.6rem;}
+
+  &__description-medium {font-size: 4rem;}
+  
+  &__description-lage {
+   color: $season-text-color2;
+   font-family: 'GmarketSansBold';
+   font-size: 9rem;
+   font-weight: 900;
+  }
+
+  &__more {
+   font-size: 1.7rem;
+   color: $season-text-color2;
+  }
+
+  .season-bar {
+   display: block;
+   width: 160px;
+   background-color: inherit;
+  }
+
+  &__beverage-list {
+   position: absolute;
+   right: 0;
+   top: 0;
+  }
+
+ }//---------- season END
+}
