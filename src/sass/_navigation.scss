@@ -5,7 +5,7 @@
 
  // menu-list
  &__menu-list {
-  @include flexBox();
+  @include flexBox($ma:space-around);
    margin: 40px auto;
  }//---------- nemu-list END
 

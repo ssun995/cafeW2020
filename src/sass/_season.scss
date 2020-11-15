@@ -1,69 +1,99 @@
 @import "./mixin";
 
+
+// 애니메이션
+@keyframes bounce {
+ 0% {transform: translateY(-15px);}
+ 100% {transform: none;}
+}
+
 .season-container {
   background-color: $season-bg-color;
   color: $season-text-color;
+}
 
  // 공통
  [class^="season__description-"]{display: block;}
 
- .season {
-  text-transform: uppercase;
-  padding: 83px 919px 120px 119px;
-  text-align: center;
-  position: relative;
+.season {
+ text-transform: uppercase;
+ padding: 83px 919px 120px 119px;
+ text-align: center;
+ position: relative;
 
-  &__description {margin-bottom: 40px;}
+ &__description {margin-bottom: 40px;}
 
-  &__description-small {
+ &__description-small {
+  display: block;
+  font-size: 2.6rem;
+  border-bottom: 1px solid;
+  border-bottom-color: inherit;
+  padding-bottom: 20px;
+ }
+
+ &__description-medium {font-size: 4rem;}
+ 
+ &__description-lage {
+  color: $season-text-color2;
+  font-family: 'GmarketSansBold';
+  font-size: 9rem;
+  font-weight: 900;
+ }
+
+ .season-bar {
+  @include flexBox($f-wrap:nowrap);
+
+  &::before,
+  &::after {
+   content: "";
    display: block;
-   font-size: 2.6rem;
-   border-bottom: 1px solid;
-   border-bottom-color: inherit;
-   padding-bottom: 20px;
+   width: 160px;
+   height: 1px;
+   background-color: currentColor;
   }
 
-  &__description-medium {font-size: 4rem;}
+  >span {
+   display: inline-block;
+   text-transform: none;
+   padding: 0 20px;
+  }
+ }// season-bar END
+
+ &__beverage-item {
+  position: absolute;
   
-  &__description-lage {
-   color: $season-text-color2;
-   font-family: 'GmarketSansBold';
-   font-size: 9rem;
-   font-weight: 900;
+  img {
+   animation: bounce 1000ms infinite alternate ease-in-out;
+   //animation-play-state: paused; // running / paused
+  }
+  
+  &:nth-child(1) {
+   left: 481px;
+   top: 113px;
+
+   img {animation-delay: 100ms;}
+  }
+  &:nth-child(2) {
+   left: 709px;
+   top: 62px;
+
+   img {animation-delay: 200ms;}
+  }
+  &:nth-child(3) {
+   left: 999px;
+   top: 188px;
+
+   img {animation-delay: 400ms;}
   }
 
-  &__more {
-   font-size: 1.7rem;
-   color: $season-text-color2;
-   padding: 10px 25px;
-   border: 1px solid;
-   border-color: currentColor;
-  }
+ }// __beverage-item END
 
-  .season-bar {
-   @include flexBox($f-wrap:nowrap);
-
-   &::before,
-   &::after {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 1px;
-    background-color: currentColor;
-   }
-
-   >span {
-    display: inline-block;
-    text-transform: none;
-    padding: 0 20px;
-   }
-  }
-
-  &__beverage-list {
-   position: absolute;
-   right: 0;
-   top: 0;
-  }
-
- }//---------- season END 
+ &__more {
+  font-size: 1.7rem;
+  color: $season-text-color2;
+  padding: 10px 25px;
+  border: 1px solid;
+  border-color: currentColor;
+ }
+ 
 }

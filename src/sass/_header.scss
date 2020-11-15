@@ -6,7 +6,7 @@
 // header
 .header {
  height: 80px;
- @include flexBox();
+ @include flexBox($ma:space-around);
 
   // logo
   &__logo {
