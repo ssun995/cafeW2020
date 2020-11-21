@@ -1,0 +1,125 @@
+@import "./mixin";
+
+/*.notice {
+ width: 600px;
+ height: 60px;
+ margin: 0 auto;
+
+ position: relative;
+ bottom: 110px;
+
+ ::after {@include clearBoth;}
+
+
+ &__inform-list {
+  width: 600px;
+  height: 60px;
+  background-color: rgba($notice-bg-color, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);border-radius: 30px;
+
+  overflow: hidden;
+
+ }
+
+ &__inform-item{
+  @include flexBox($ma:space-around);
+
+  width: 423px;
+  height: 22px;
+  margin: 19px auto;
+
+  a::before {
+   content: "";
+   display: inline-block;
+   width: 26px;
+   height: 24px;
+   background: url(../images/icon-sound.svg) no-repeat top left;
+   background-size: contain;
+  }
+
+  a {
+   display: inline-block;
+   width: 320px;
+
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+  }
+
+  time {padding-left: 16px;}
+
+ }// inform-list END
+
+ .close-button {
+  @include buttonNone;
+
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  right: 20px;
+  top: 10px;
+ }
+
+}*/
+
+.notice-container {
+ position: relative;
+}
+
+.notice{
+ @include flexBox($f-wrap:nowrap);
+
+ padding: 0 30px;
+
+ $height : 60px;
+ $list-height : 24px;
+
+ width: 600px;
+ height: $height;
+ background-color: $notice-bg-color;
+ border-radius: $height/2;
+
+ position: absolute;
+ top: -94px;
+ left: 50%;
+ transform: translateX(-50%);
+
+ &__inform-list {
+
+
+  margin: 0;
+  height: $list-height;
+  overflow: hidden;
+ }
+
+ &__inform-item {
+  @include flexBox($f-wrap:nowrap);
+
+  height: $list-height;
+
+  &::before {
+   content: "";
+   width: 26px;
+   height: $list-height;
+   background: url(../images/icon-sound.svg) no-repeat center;
+   background-size: contain;
+   margin: 20px;
+  }
+
+  a {
+   width: 300px;
+   margin-right: 20px;
+
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+  }
+
+ }// inform-item END
+
+ .close-button {
+  @include buttonNone;
+ }
+
+}
