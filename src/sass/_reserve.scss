@@ -1,0 +1,93 @@
+@import "./mixin";
+
+/*
+.reserve-container {
+ $height : 458px;
+ 
+ height: $height;
+ background: url(../images/reserve-bg.jpg) no-repeat top center;
+ background-size: cover;
+
+ .reserve {
+ height: $height;
+ color: $season-text-color;
+ padding: 90px 0 250px 0;;
+ margin: 0 873px 0 224px;
+
+ position: relative;
+
+  &__subtitle {
+   font-size: 2.6rem;
+   text-transform: uppercase;
+  }
+
+  &__description {
+   width: 192px;
+   line-height: 1.5em;
+  }
+
+  &__bg-container {
+   width: 70px;
+   height: 95px;
+
+   position: absolute;
+   left: -120px;
+   top: 90px;
+  }
+
+ }// reserve END
+
+}*/
+
+
+.reserve-container {
+ background: 
+  radial-gradient(109.05% 429.25% at 50% 50%, rgba(23, 15, 4, 0) 0%, #3C1D0A 100%),
+  url(../images/reserve-bg.jpg) no-repeat 50% 50% / cover; //cover : 가로로 길때,  contain : 세로로 길때
+
+}
+
+.reserve {
+ $height : 458px;
+
+ min-height: $height;
+ padding: 90px 0 0 224px;
+ color: $season-text-color;
+
+ position: relative;
+ 
+ &__title,
+ &__subtitle {
+  text-transform: uppercase;
+  margin: 0;
+ }
+
+ &__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+ }
+
+ &__subtitle {font-size: 2.6rem;}
+
+ &__description {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  width: 192px;
+ }
+
+ &__more {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid currentColor;
+  margin-top: 20px;
+ }
+
+ &__bg-container {
+//  path {fill: #3C1D0A;}
+//  line {stroke: #3C1D0A;}
+  position: absolute;
+  top: 124px;
+  left: 120px;
+ }
+
+}
