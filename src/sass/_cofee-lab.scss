@@ -6,6 +6,7 @@
 .coffee-lab {
  color: $lecture-dark-color;
  line-height: 1.4;
+ padding: 80px 0 215px 0;
 
  &__title {
   font-size: 4.6rem;
@@ -28,6 +29,7 @@
 
   &::after {
    @include afterLine (70px, 1px, currentcolor);
+   display: block;
 
    margin: 55px auto;
   }
