@@ -27,3 +27,12 @@
  display: block;
  clear: both;
 }
+
+// ::after line
+@mixin afterLine($width, $height, $color) {
+ content: "";
+ display: inline-block;
+ width: $width;
+ height: $height;
+ background-color: $color;
+}
