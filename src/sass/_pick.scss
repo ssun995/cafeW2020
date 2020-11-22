@@ -1,4 +1,135 @@
 @import "./mixin";
 
+/*.pick-container {
+ background: linear-gradient(105.54deg, rgba(32, 23, 1, 0.5) 36.2%, rgba(95, 57, 35, 0.2) 74.71%), 
+ url(../images/image10.png) no-repeat center center/cover;
+}
+
 .pick {
+ padding: 110px 925px 110px 110px;
+ text-align: right;
+
+ position: relative;
+
+ &__title {
+  text-transform: uppercase;
+  line-height: 0.95;
+ }
+
+ &--large {font-size: 15.5rem;}
+ &--medium {font-size: 13.3rem;}
+ &--small {font-size: 7.3rem;}
+
+ &__description {font-size: 3.2rem;}
+
+ &__good-list {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+ }
+
+ &__photo-container {
+  position: absolute;
+  top: 190px;
+  left: 770px;
+
+  @include flexBox($ma:flex-start);
+ }
+
+ &__photo-image {
+
+
+   img {
+    width: 284px;
+    height: auto;
+    border: 10px solid #FFFFFF;
+    filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.45));
+   }
+
+   & photo1 {
+    transform: rotate(-9.21deg);
+   }
+   & photo2 {
+    transform: rotate(8.71deg);
+   }
+   & photo3 {
+    transform: rotate(29.6deg);
+   }
+
+  }
+
+}*/
+
+
+.pick-container {
+ background: linear-gradient(105.54deg, rgba(32, 23, 1, 0.5) 36.2%, rgba(95, 57, 35, 0.2) 74.71%), 
+ url(./../images/image10.png) no-repeat center center/cover;
+}
+
+.pick {
+ padding: 110px 925px 110px 110px;
+ text-align: right;
+
+ position: relative;
+
+ &__title {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 0.95;
+ }
+
+ &--large {font-size: 15.5rem;}
+
+ &--medium {font-size: 13.3rem;}
+
+ &--small {font-size: 7.4rem;}
+
+ &__description {
+  font-size: 3.2rem;
+  line-height: 1.45;
+  margin-top: 44px;
+  margin-bottom: 0;
+ }
+
+ &__good-list {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 0;
+ }
+
+ &__more {margin-top: 40px;}
+
+ &__photo-container {
+  display: flex;
+
+  position: absolute;
+  top: 150px;
+  left: 592px;
+
+  .photo1 {
+   transform: translate(0, 40px) rotate(-9.21deg);
+  }
+  .photo2 {
+   transform: translate(-80px, 0) rotate(8.71deg);
+  }
+  .photo3 {
+   transform: translate(-140px, 150px) rotate(10.6deg);
+  }
+
+ }
+
+ &__photo-image {
+  width: 284px;
+  padding: 10px;
+  background: #fff;
+  filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.45));
+  
+  img {
+   width: 100%;
+   height: auto;
+  }
+ }
+
 }

@@ -12,6 +12,8 @@
   font-style: normal;
 }
 
+@import "./mixin";
+
 // 숨김 콘텐츠 
 .a11y-hidden, legend{
   position: absolute;
@@ -59,3 +61,17 @@ body{
 body *, body *::before, body *::after{
   box-sizing: border-box;
 }
+
+// line-break : 줄바꿈 설정
+.line-break {display: block;}
+
+
+
+// button design
+.button-stroke {
+  @include buttonNone;
+
+  display: inline-block;
+  padding: 12px 25px 10px 25px;
+  border: 1px solid currentColor;
+ }
